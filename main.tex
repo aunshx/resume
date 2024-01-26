@@ -1,0 +1,148 @@
+%-------------------------
+% Resume in Latex
+% Author : aunshx
+% Github: https://github.com/aunshx
+% Portfolio: https://aunsh.com
+%------------------------
+
+\documentclass[A4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+
+
+\usepackage[scaled]{helvet} % Load the Helvetica font
+\renewcommand\familydefault{\sfdefault} % Set the  font family to sans-serif
+\usepackage[T1]{fontenc} % Use the T1 font encoding to ensure proper character rendering
+% \usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{etoolbox}
+\usepackage{keycommand}
+\usepackage{xstring}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=black,
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.9in}
+\addtolength{\textheight}{1.0in}
+\usepackage[margin=0.25in]{geometry}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeProjectItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small {#1}} & \small #2 \\
+      {\small#3} & \small #4 \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubheadingNew}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small {#1}} $|$ \small #2 {\small#3} & \small #4 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubheadingWithCoursework}[5]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \small #2 \\
+      {\small#3} & \small #4 \\
+    \end{tabular*}
+    \small #5\\
+    \vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\resumeProjectSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
+\newcommand{\resumeProjectSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-------------
+\input{src/heading}
+
+% --------- SUMMARY -----------
+\input{src/summary}
+
+%-----------EDUCATION-----------
+\input{src/education}
+
+% ------- RESEARCH -------------
+\input{src/research}
+
+%-----------EXPERIENCE----------
+\input{src/experience}
+
+%------PROGRAMMING SKILLS-------
+\input{src/skills}
+
+%----------- PROJECTS ----------
+\input{src/projects}
+
+%-----------Awards-------------
+\input{src/awards}
+
+%-------------------------------------------
+\end{document}
+
